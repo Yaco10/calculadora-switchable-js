@@ -50,7 +50,6 @@ function clearAll() {
 function toggleOnOff() {
     const containerOnOf = document.getElementById('on-of-container');
     const buttons = document.querySelectorAll('button');
-    const isOn = containerOnOf.classList.toggle('on-of-button-active');
   
     buttons.forEach(button => {
         if (button.classList.contains('button') || button.classList.contains('button-on')) {
