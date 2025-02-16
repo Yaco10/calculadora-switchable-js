@@ -10,34 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="calculator-conteiner">
-        <div class="display"></div>
-        <div class="buttons-out">
-            <div class="container-on-of">
-                <button class="on-of"></button>
-            </div>
+    <div class="calculator-container">
+        <div class="display">
+            <div id="sub-display" class="sub-display"></div>
+            <div id="display" class="main-display"></div>
         </div>
-        <div class="calculator-grid">  
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="diferent">%</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="diferent">/</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="diferent">-</button>
-            <button>0</button>
-            <button>.</button>
-            <button class="diferent">x</button>
-            <button class="diferent">+</button>
-            <button class="delete back">BACK</button>
-            <button class="delete">C</button>
-            <button class="equal">=</button>
+        <div onclick ="toggleOnOff()" id="on-of-container" class="on-off-container">
+            <div id="on-off-button" class="on-of-button"></div>
         </div>
-    <div>
+        <div class="calculator-grid">
+            <button onclick="clearAll()" class="action">C</button>
+            <button onclick="deleteOne()" class="action">⌫</button>
+            <button onclick="addOperator('%')" class="operator">%</button>
+            <button onclick="addOperator('/')" class="operator">/</button>
+
+            <button onclick="addNumber('7')" class="button">7</button>
+            <button onclick="addNumber('8')" class="button">8</button>
+            <button onclick="addNumber('9')" class="button">9</button>
+            <button onclick="addOperator('*')" class="operator">×</button>
+
+            <button onclick="addNumber('4')" class="button">4</button>
+            <button onclick="addNumber('5')" class="button">5</button>
+            <button onclick="addNumber('6')" class="button">6</button>
+            <button onclick="addOperator('-')" class="operator">-</button>
+
+            <button onclick="addNumber('1')" class="button">1</button>
+            <button onclick="addNumber('2')" class="button">2</button>
+            <button onclick="addNumber('3')" class="button">3</button>
+            <button onclick="addOperator('+')" class="operator">+</button>
+
+            <button onclick="addNumber('0')" class="button">0</button>
+            <button onclick="addNumber('.')" class="button">.</button>
+            <button onclick="calculateResult()" class="equal">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
